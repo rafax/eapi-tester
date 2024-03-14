@@ -10,9 +10,10 @@ export let options = {
 }
 
 const clientFactory = {
-  "cg-triton" : () => new CodyGatewayClient("https://cody-gateway.sourcegraph.com/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "sourcegraph/triton"),
-  "cg-openai" : () => new CodyGatewayClient("https://cody-gateway.sourcegraph.com/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "openai/text-embedding-ada-002"),
-  "direct-dev-cg-triton" : () => new CodyGatewayClient("https://cody-gateway-xrmga2bl6q-uc.a.run.app/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "sourcegraph/triton"),
+  "cg-triton" : () => new CodyGatewayClient("https://cody-gateway.sgdev.org/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "sourcegraph/triton"),
+  "cg-openai" : () => new CodyGatewayClient("https://cody-gateway.sgdev.org/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "openai/text-embedding-ada-002"),
+  "direct-cg-triton" : () => new CodyGatewayClient("https://cody-gateway-xrmga2bl6q-uc.a.run.app/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "sourcegraph/triton"),
+  "direct-dev-cg-triton-http" : () => new CodyGatewayClient("https://cody-gateway-2-xrmga2bl6q-uc.a.run.app/v1/embeddings", __ENV.CODY_GATEWAY_API_KEY, "sourcegraph/triton"),
 }
 
 export default async function () {
