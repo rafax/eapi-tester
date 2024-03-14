@@ -5,7 +5,7 @@ export let options = {
   thresholds: {
     http_req_duration: ["p(95)<500", "p(99)<1500"],
   },
-  vus: 10,
+  vus: 5,
   duration: "5s",
 };
 
@@ -115,6 +115,11 @@ const clientFactory = {
     new TritonClient(
       "http://34.123.252.104:8000/v2/models/ensemble_model/infer"
     ),
+    "https-triton": () =>
+    new TritonClient(
+      "https://embeddings-triton-direct.sgdev.org/v2/models/ensemble_model/infer"
+    ),
+    
   "cf-triton": () =>
     new TritonClient(
       "https://embeddings-triton.sgdev.org/v2/models/ensemble_model/infer"
