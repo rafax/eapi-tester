@@ -17,7 +17,7 @@ export default async function () {
   check(data, {
     "response is not empty": (r) => r.length == client.dimensions(),
     "first element is approximately right": (r) =>
-      Math.abs(r[0] - client.firstElementForText()) < 0.001,
+      Math.abs(r[0] - client.firstElementForText()) < 0.000001,
   });
   sleep(1);
 }
