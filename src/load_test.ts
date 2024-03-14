@@ -105,7 +105,7 @@ const clientFactory = {
       __ENV.CODY_GATEWAY_API_KEY,
       "sourcegraph/triton"
     ),
-  "direct-dev-cg-triton-http": () =>
+  "direct-cg-triton-https": () =>
     new CodyGatewayClient(
       "https://cody-gateway-2-xrmga2bl6q-uc.a.run.app/v1/embeddings",
       __ENV.CODY_GATEWAY_API_KEY,
