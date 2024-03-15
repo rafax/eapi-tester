@@ -87,7 +87,7 @@ class TritonClient implements EmbeddingsClient {
 }
 
 const clientFactory = {
-  "cf-cg-triton": () =>
+    "cf-cg-triton-https": () =>
     new CodyGatewayClient(
       "https://cody-gateway.sgdev.org/v1/embeddings",
       __ENV.CODY_GATEWAY_API_KEY,
